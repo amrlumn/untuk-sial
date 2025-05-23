@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Untuk Kawan Paling Cool</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom right, #f0e4f7, #ffffff);
+      font-family: 'Segoe UI', sans-serif;
+      text-align: center;
+      overflow: hidden;
+      height: 100vh;
+    }
+
+    h1 {
+      color: #7a42f4;
+      margin-top: 80px;
+      animation: fadeIn 2s ease;
+    }
+
+    p {
+      font-size: 18px;
+      color: #333;
+      animation: fadeIn 3s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .flower {
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      background: url('https://cdn-icons-png.flaticon.com/512/616/616408.png') no-repeat center;
+      background-size: cover;
+      animation: fall 6s linear infinite;
+    }
+
+    @keyframes fall {
+      0% {
+        transform: translateY(-100px) rotate(0deg);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(110vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Hai Kawan 🌸</h1>
+  <p>Kau antara manusia paling chill & supportive yang aku pernah kenal 😎<br>Jangan pernah hilang vibe cool tu okay?</p>
+
+  <!-- Falling flowers -->
+  <script>
+    for (let i = 0; i < 20; i++) {
+      let flower = document.createElement("div");
+      flower.className = "flower";
+      flower.style.left = Math.random() * 100 + "vw";
+      flower.style.animationDuration = (4 + Math.random() * 4) + "s";
+      document.body.appendChild(flower);
+    }
+  </script>
+
+  <!-- Lagu Billie Eilish -->
+  <audio autoplay loop>
+    <source src="https://dl.dropboxusercontent.com/scl/fi/h0w8b9yir7e3rpztw04s3/billie.mp3?rlkey=xyz123" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+</body>
+</html>
